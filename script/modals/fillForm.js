@@ -38,10 +38,7 @@ popup.innerHTML = `
                 <div class="flex items-center gap-[12px] md:gap-[44px]">
                     <input type="checkbox" class="custom-checkbox" checked>
                     <label class="text-[10px] w-[280px] md:text-[16px] md:w-auto text-white">
-                        Я соглашаюсь с условиями и даю
-                        свое согласие на обработку и<br class="hidden md:flex"> использование моих
-                        персональных данных, и разрешаю<br class="hidden md:flex">
-                        сделать запрос в бюро кредитных историй
+                        Я согласен с условиями обработки персональных данных
                     </label>
                 </div>
                 <button class="w-full mt-[80px] py-[40px] text-[32px] font-regular rounded-[24px] bg-[#FF0000] text-[#060807] relative z-10">

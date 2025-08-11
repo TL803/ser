@@ -46,11 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             required>
                     </div>
 
-                    <div class="flex items-start gap-[12px] md:gap-[20px]">
-                        <input type="checkbox" id="consent" class="mt-1 w-[80px] custom-checkbox" checked>
+                    <div class="flex items-center gap-[12px] md:gap-[20px]">
+                        <input type="checkbox" id="consent" class="mt-1 w-[45px] custom-checkbox" checked>
                         <label for="consent" class="text-[14px] md:text-[16px] text-white leading-relaxed">
-                            Я соглашаюсь с условиями и даю своё согласие на обработку и использование моих
-                            персональных данных, и разрешаю сделать запрос в бюро кредитных историй.
+                            Я согласен с условиями обработки персональных данных
                         </label>
                     </div>
 
@@ -127,10 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const paginatedServices = services.slice(startIndex, endIndex);
 
         return paginatedServices.map(item => `
-            <div class="flex flex-col justify-between py-[52px] px-6 items-center gap-8 w-[416px] h-[480px] text-center bg-white shadow-2xl rounded-3xl transition-all duration-300 hover:shadow-3xl">
-                <p class="text-[36px] h-[130px] font-regular leading-tight">${item.title}</p>
-                <p class="text-[36px] font-regular">${item.price}</p>
-                <button class="OpenConsultationPopup bg-[#FF0000] text-[24px] font-regular text-white rounded-[44px] px-8 py-5 w-max transition hover:bg-[#E60000]">
+            <div class="flex flex-col justify-between p-[24px] md:py-[52px] md:px-6 items-center gap-[52px] md:gap-8 w-full md:w-[416px] h-[282px] md:h-[480px] text-center bg-white shadow-2xl rounded-3xl transition-all duration-300 hover:shadow-3xl">
+                <p class="text-[20px] md:text-[36px] min-h-[50px] md:h-[130px]  font-regular leading-tight">${item.title}</p>
+                <p class="text-[24px] md:text-[36px] font-regular">${item.price}</p>
+                <button class="OpenConsultationPopup bg-[#FF0000] text-[16px] font-regular text-white rounded-[44px] w-full px-8 py-[12px] md:py-5 w-max transition hover:bg-[#E60000]">
                     Записаться на сервис
                 </button>
             </div>
@@ -141,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const totalPages = Math.ceil(services.length / itemsPerPage);
         let paginationHTML = '';
 
-        // Кнопка "Назад"
         paginationHTML += `
             <div class="w-[41px] h-[31px] flex justify-center items-center text-[#FF0000] shadow-2xl rounded-[8px] cursor-pointer prev-btn"
                 style="box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.25);">
@@ -149,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
 
-        // Номера страниц
         for (let i = 1; i <= totalPages; i++) {
             paginationHTML += `
                 <div 
@@ -163,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
         }
 
-        // Кнопка "Вперёд"
         paginationHTML += `
             <div class="w-[41px] h-[30px] flex justify-center items-center shadow-2xl rounded-[8px] cursor-pointer next-btn"
                 style="box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.25);">
@@ -220,29 +216,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // === 4. Инициализация ===
     render();
 
-    // После рендера добавляем новые кнопки в обработку (например, после смены страницы)
     const updateOpenButtons = () => {
         setTimeout(() => {
             const newButtons = document.getElementsByClassName('OpenConsultationPopup');
             Array.from(newButtons).forEach(btn => {
                 if (!btn.dataset.listenerAdded) {
                     btn.addEventListener('click', openPopup);
-                    btn.dataset.listenerAdded = 'true'; // защита от дублирования
+                    btn.dataset.listenerAdded = 'true'; 
                 }
             });
         }, 0);
     };
 
-    // Переопределяем render, чтобы обновлять обработчики
     const originalRender = render;
     window.render = function () {
         originalRender();
         updateOpenButtons();
     };
 
-    // Запуск обновления обработчиков при первом рендере
     updateOpenButtons();
 });

@@ -56,6 +56,6 @@
             const img = document.createElement('img');
             img.setAttribute('src', mark);
             img.setAttribute('alt', 'Логотип бренда');
-            img.classList.add('w-16', 'h-16', 'mx-2', 'opacity-80', 'hover:opacity-100', 'transition');
+            img.classList.add('md:w-16', 'md:h-16', 'mx-4', 'transition', 'w-10', 'h-10');
             showMarksContainer.appendChild(img);
         });
