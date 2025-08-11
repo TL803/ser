@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
     popupBack.appendChild(popup);
     body.appendChild(popupBack);
 
-    // === 2. Обработчики для открытия/закрытия попапа ===
     const openButtons = document.getElementsByClassName('OpenConsultationPopup');
     const closeOnBackdrop = (e) => {
         if (e.target === popupBack) {
@@ -82,11 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // Открытие попапа по кнопке
     const openPopup = (e) => {
         e.preventDefault();
         popupBack.classList.remove('hidden');
-        body.style.overflow = 'hidden'; // запрещаем скролл
+        body.style.overflow = 'hidden';
     };
 
     // Назначаем обработчики всем кнопкам с классом OpenConsultationPopup
@@ -129,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const paginatedServices = services.slice(startIndex, endIndex);
 
         return paginatedServices.map(item => `
-            <div class="flex flex-col justify-between py-[52px] px-6 items-center gap-8 w-[416px] h-[480px] text-center bg-white shadow-2xl rounded-3xl transition-all duration-300 hover:shadow-3xl hover:scale-105">
+            <div class="flex flex-col justify-between py-[52px] px-6 items-center gap-8 w-[416px] h-[480px] text-center bg-white shadow-2xl rounded-3xl transition-all duration-300 hover:shadow-3xl">
                 <p class="text-[36px] h-[130px] font-regular leading-tight">${item.title}</p>
                 <p class="text-[36px] font-regular">${item.price}</p>
                 <button class="OpenConsultationPopup bg-[#FF0000] text-[24px] font-regular text-white rounded-[44px] px-8 py-5 w-max transition hover:bg-[#E60000]">
