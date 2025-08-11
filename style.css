@@ -41,3 +41,10 @@
     background-repeat: no-repeat;
 }
 
+    nav a.active {
+        color: #FF0000;
+    }
+    
+    .mobile-nav a.active {
+        color: #FF0000;
+    }

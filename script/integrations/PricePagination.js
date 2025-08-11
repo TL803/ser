@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // === 1. Создание попапа с формой ===
     const body = document.body;
 
     const popupBack = document.createElement('div');
@@ -48,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
 
                     <div class="flex items-start gap-[12px] md:gap-[20px]">
-                        <input type="checkbox" id="consent" class="mt-1 custom-checkbox" checked>
+                        <input type="checkbox" id="consent" class="mt-1 w-[80px] custom-checkbox" checked>
                         <label for="consent" class="text-[14px] md:text-[16px] text-white leading-relaxed">
                             Я соглашаюсь с условиями и даю своё согласие на обработку и использование моих
                             персональных данных, и разрешаю сделать запрос в бюро кредитных историй.
