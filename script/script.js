@@ -1,0 +1,6 @@
+import './showMarks.js'
+import './integrations/ServicesIterating.js'
+import './integrations/AboutUsIntegration.js'
+import './integrations/PricePagination.js'
+import './modals/fillForm.js'
+import './modals/fillFormConsultation.js'

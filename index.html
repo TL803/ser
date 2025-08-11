@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Подключаем Tailwind CSS через CDN (самый верх) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Твои кастомные стили (должны идти после Tailwind, чтобы можно было переопределять) -->
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Кастомная конфигурация Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        md: '1790px'
+                    },
+                }
+            }
+        };
+    </script>
+
+    <style>
+        .container-main {
+            width: 1790px !important;
+        }
+    </style>
+</head>
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                screens: {
+                    md: '1790px'
+                },
+            }
+        }
+    };
+</script>
+
+<body>
+
+    <section class="bg-cover bg-center w-full h-[900px] pt-8 relative"
+        style="background-image: url('./assets/rectangle-1.png');">
+        <header
+            class="container-main fixed left-1/2 top-4 transform -translate-x-1/2 z-50 mx-auto py-4 px-5 bg-[#070709] rounded-2xl box-border items-center justify-between flex w-auto"
+            style="max-width: 1790px;">
+            <img src="./assets/Logo Независимость(2) 1 (2).svg" alt="Лого">
+            <nav class="flex gap-[52px] text-white">
+                <a class="text-[16px] font-normal" href="#specialOffers">
+                    <p>Спецпредложения</p>
+                </a>
+                <a class="text-[16px] font-normal" href="#services">
+                    <p>Услуги</p>
+                </a>
+                <a class="text-[16px] font-normal" href="#prices">
+                    <p>Цены</p>
+                </a>
+                <a class="text-[16px] font-normal" href="#about">
+                    <p>О компании</p>
+                </a>
+                <a class="text-[16px] font-normal" href="#contacts">
+                    <p>Контакты</p>
+                </a>
+            </nav>
+            <div class="flex gap-10">
+                <div class="flex flex-col gap-2">
+                    <p class="text-white flex gap-3 items-center">
+                        <img src="./assets/Vector.svg" alt=""> 8 999 999 99 99
+                    </p>
+                    <p class="text-white flex gap-3 items-center">
+                        <img src="./assets/Vector-1.svg" alt=""> г. Москва, Береговой проезд, дом 4/6с3
+                    </p>
+                </div>
+                <button
+                    class="bg-[#FF0000] OpenConsultationPopup cursor-pointer text-2xl text-white px-14 py-4 rounded-xl">
+                    Заказать звонок
+                </button>
+            </div>
+        </header>
+        <header class="md:hidden flex">
+            <img src="./assets/Бургер меню (3).svg" alt="Бургер">
+        </header>
+
+        <div class="container-main m-auto flex flex-col gap-12 mt-[252px]">
+            <h1 class="text-white text-5xl leading-13 font-medium">НЕЗАВИСИМОСТЬ —<br> Профессиональный сервис<br>
+                в Вашем городе</h1>
+            <p class="text-white text-2xl leading-8 text-regular">Качественный ремонт и обслуживание автомобиля без
+                очереди<br>
+                и по разумной цене. Мы заботимся о Вашем авто и Вашем времени!</p>
+            <button
+                class="bg-[#FF0000] OpenConsultationPopup w-max cursor-pointer font-semibold text-2xl text-white px-[88px] py-6 rounded-3xl mt-[40px]">
+                Записаться на сервис
+            </button>
+        </div>
+
+        <div class="flex gap-8 absolute right-20 bottom-5">
+            <a
+                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fnzvsmst_auto%2F%3Figsh%3DMTd3MGhjODlobXpoaw%253D%253D%26utm_source%3Dqr&is_from_rle"><img
+                    src="./assets/инста.svg" alt=""></a>
+            <a href="https://rutube.ru/channel/65463639/"><img src="./assets/Рутуб.svg" alt=""></a>
+            <a href=""><img src="./assets/тг.svg" alt=""></a>
+            <a href=""><img src="./assets/Ютуб.svg" alt="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"></a>
+        </div>
+    </section>
+
+    <main class="container-main m-auto">
+        <section id="specialOffers" class="text-center">
+            <h2 class="text-6xl font-medium mt-40 mb-7">Спецпредложения</h2>
+            <p class="text-4xl font-regular mb-12">Следите за нашими новыми предложениями и экономьте вместе с нами!</p>
+
+            <div class="flex flex-wrap gap-8">
+                <div class="w-[864px] h-[428px] rounded-3xl flex flex-col justify-between py-10 px-20 shadow-2xl">
+                    <div class="text-start">
+                        <h3 class="text-3xl font-medium mb-8">ТЕСТ-ДРАЙВ СЕРВИСА!</h3>
+                        <p class="text-2xl font-regular mb-5">Дарим скидку 50% на работу при первом визите</p>
+                        <span class="text-lg font-regular">Предложение действует до 31.10.25</span>
+                    </div>
+                    <button class="w-full bg-[#FF0000] OpenConsultationPopup rounded-[44px] py-5 text-white">Записаться</button>
+                </div>
+                <img class="w-[864px] h-[428px] object-cover rounded-3xl" src="./assets/Rectangle 5.png" alt="" />
+                <img class="w-[864px] h-[428px] object-cover rounded-3xl" src="./assets/Rectangle 42.png" alt="" />
+                <div class="w-[864px] h-[428px] rounded-3xl flex flex-col justify-between py-10 px-20 shadow-2xl">
+                    <div class="text-start">
+                        <h3 class="text-3xl font-medium mb-8">НАЗОВИ ПРОМОКОД «НАДЁЖНО»</h3>
+                        <p class="text-2xl font-regular mb-5">И получи комплексную диагностику автомобиля всего<br> за
+                            5990 ₽!</p>
+                        <span class="text-lg font-regular">Предложение действует до 31.10.25</span>
+                    </div>
+                    <button class="w-full bg-[#FF0000] OpenConsultationPopup rounded-[44px] py-5 text-white">Записаться</button>
+                </div>
+                <div class="w-[864px] h-[428px] rounded-3xl flex flex-col justify-between py-10 px-20 shadow-2xl">
+                    <div class="text-start">
+                        <h3 class="text-3xl font-medium mb-8">Только в августе!</h3>
+                        <p class="text-2xl font-regular mb-5">При сумме чека свыше 25 000 ₽ одна услуга на выбор В
+                            ПОДАРОК! </p>
+                        <span class="text-lg font-regular">Предложение действует до 31.10.25</span>
+                    </div>
+                    <button class="w-full bg-[#FF0000] OpenConsultationPopup rounded-[44px] py-5 text-white">Записаться</button>
+                </div>
+                <img class="w-[864px] h-[428px] object-cover rounded-3xl" src="./assets/Rectangle 43.png" alt="" />
+                <img class="w-[864px] h-[428px] object-cover rounded-3xl" src="./assets/Rectangle 44.png" alt="" />
+                <div class="w-[864px] h-[428px] rounded-3xl flex flex-col justify-between py-10 px-20 shadow-2xl">
+                    <div class="text-start">
+                        <h3 class="text-3xl font-medium mb-8">Такси до дома за наш счёт!</h3>
+                        <p class="text-2xl font-regular mb-5">Оставили у нас свой автомобиль? Такси
+                            до дома за наш счёт!</p>
+                    </div>
+                    <button
+                        class="w-full OpenConsultationPopup bg-[#FF0000] rounded-[44px] py-5 text-white">Записаться</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="w-[1316px] m-auto flex flex-col justify-center items-center">
+            <h2 class="text-6xl font-medium mt-40 mb-7">Услуги</h2>
+            <p class="text-4xl font-regular mb-12">Наш сервис представляет большой спектр услуг, основные из которых:
+            </p>
+            <div id="serviceIntegrationContainer" class="flex flex-wrap gap-8">
+                <div class="bg-[#0F0F0F] rounded-2xl py-7 px-[62px] flex flex-col items-center"><img
+                        src="./assets/------------------- 1.svg" alt="">
+                    <p class="text-white text-2xl font-medium">Диагностика</p>
+                </div>
+                <div class="bg-[#0F0F0F] rounded-2xl py-7 px-[62px] flex flex-col items-center"><img
+                        src="./assets/------------------- 1.svg" alt="">
+                    <p class="text-white text-2xl font-medium">Диагностика</p>
+                </div>
+                <div class="bg-[#0F0F0F] rounded-2xl py-7 px-[62px] flex flex-col items-center"><img
+                        src="./assets/------------------- 1.svg" alt="">
+                    <p class="text-white text-2xl font-medium">Диагностика</p>
+                </div>
+                <div class="bg-[#0F0F0F] rounded-2xl py-7 px-[62px] flex flex-col items-center"><img
+                        src="./assets/------------------- 1.svg" alt="">
+                    <p class="text-white text-2xl font-medium">Диагностика</p>
+                </div>
+                <div class="bg-[#0F0F0F] rounded-2xl py-7 px-[62px] flex flex-col items-center"><img
+                        src="./assets/------------------- 1.svg" alt="">
+                    <p class="text-white text-2xl font-medium">Диагностика</p>
+                </div>
+                <div class="bg-[#0F0F0F] rounded-2xl py-7 px-[62px] flex flex-col items-center"><img
+                        src="./assets/------------------- 1.svg" alt="">
+                    <p class="text-white text-2xl font-medium">Диагностика</p>
+                </div>
+                <div class="bg-[#0F0F0F] rounded-2xl py-7 px-[62px] flex flex-col items-center"><img
+                        src="./assets/------------------- 1.svg" alt="">
+                    <p class="text-white text-2xl font-medium">Диагностика</p>
+                </div>
+                <div class="bg-[#0F0F0F] rounded-2xl py-7 px-[62px] flex flex-col items-center"><img
+                        src="./assets/------------------- 1.svg" alt="">
+                    <p class="text-white text-2xl font-medium">Диагностика</p>
+                </div>
+            </div>
+            <button class="w-[784px] bg-[#FF0000] OpenPopup rounded-[44px] py-5 text-white mt-12">Узнать подробнее о
+                других
+                услугах</button>
+        </section>
+
+        <section id="prices" class="container-main m-auto flex flex-col justify-center items-center">
+            <h2 class="text-6xl font-medium mt-[150px] mb-[52px]">Цены</h2>
+
+            <div id="PricePaginationContainer">
+            </div>
+
+            <div class="flex justify-center items-center space-x-2 mt-[52px]">
+                <div class="page-numbers">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-6xl font-medium mt-[150px] mb-[80px] text-center ">Ремонт и обслуживание всех брендов
+                автомобилей </h2>
+            <div class="flex flex-row flex-wrap" id="showAllMarks"></div>
+        </section>
+
+        <section id="about">
+            <h1 class="text-6xl font-medium mt-[150px] mb-[80px] text-center">Почему выбирают нас?</h1>
+            <div id="aboutUsIntegrationContainer" class="flex flex-wrap gap-[32px]">
+
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-[64px] mt-[150px] mb-[80px]">Отзывы</h2>
+
+        </section>
+
+
+    </main>
+    <footer id="contacts" class="bg-[#0F0F0F] w-full relative overflow-hidden">
+        <!-- Красные шарики -->
+        <div class="absolute -top-50 -left-40 w-[500px] h-[500px] rounded-full bg-[#FF0000]/50   blur-[150px]"></div>
+        <div class="absolute top-[300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-[#FF0000]/50  blur-[150px]">
+        </div>
+
+        <div class="container-main m-auto pt-[144px] pb-[125px] relative z-10">
+            <section>
+                <div class="text-center">
+                    <h1 class="text-white text-[70px] font-medium">Остались вопросы?</h1>
+                    <h2 class="text-white text-[48px] font-medium">Заполни форму и получи <span
+                            class="text-[#FF0000]">бесплатную консультацию</span></h2>
+                </div>
+                <div class="flex items-center justify-between mt-[60px]">
+                    <form action="" class="flex flex-col gap-[60px]">
+                        <div class="flex flex-col gap-[12px]">
+                            <p class="text-[20px] font-regular text-white">ФИО</p>
+                            <input
+                                class="w-[752px] h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px]"
+                                type="text" placeholder="Иванов Иван Иванович">
+                        </div>
+                        <div class="flex flex-col gap-[12px]">
+                            <p class="text-[20px] font-regular text-white">Email <span class="text-[#FF0000]">*</span>
+                            </p>
+                            <input
+                                class="w-[752px] h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px]"
+                                type="text" placeholder="mail@mail.ru">
+                        </div>
+                        <div class="flex flex-col gap-[12px]">
+                            <p class="text-[20px] font-regular text-white">Ваш телефон </p>
+                            <input
+                                class="w-[752px] h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px]"
+                                type="text" placeholder="+ 7 999-999-99-99">
+                        </div>
+                        <div class="flex items-center gap-[12px] md:gap-[44px]">
+                            <input type="checkbox" class="custom-checkbox" checked>
+                            <label class="text-[10px] w-[280px] md:text-[16px] md:w-auto text-white" for="">Я соглашаюсь
+                                с условиями и даю
+                                свое согласие на обработку и<br class="hidden md:flex"> использование моих
+                                персональных данных, и разрешаю <br class="hidden md:flex">
+                                сделать запрос
+                                в бюро кредитных историй</label>
+                        </div>
+                    </form>
+                    <img class="w-[830px] h-[494px]" src="./assets/eDr8OaZX4AoQ5KC0a1GEe3i9B5ggXmNTCCFhJLOV 1.png"
+                        alt="Машина">
+                </div>
+                <button
+                    class="w-full mt-[80px] py-[40px] text-[32px] font-regular rounded-[24px] bg-[#FF0000] text-[#060807] relative z-10">Получить
+                    предложение</button>
+            </section>
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a1d8f5c6b7e8d9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4&source=constructor"
+                class="w-full mt-[148px] relative z-10" height="532" frameborder="0"
+                style="border:0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" allowfullscreen="true"
+                loading="lazy">
+            </iframe>
+
+            <div class="flex flex-row justify-between mt-[150px] relative z-10">
+                <div class="w-[558px] flex flex-col gap-[28px]">
+                    <p class="text-[36px] text-white/50 fonn-regular">Адрес</p>
+                    <p class="text-[48px] text-white fonn-medium leading-[58px]">г. Москва, Береговой проезд, дом 4/6с3
+                    </p>
+                </div>
+                <div class="w-[558px] flex flex-col gap-[28px]">
+                    <p class="text-[36px] text-white/50 fonn-regular">График работы</p>
+                    <p class="text-[48px] text-white fonn-medium leading-[58px]">Ежедневно <br>
+                        с 9:00 до 21:00</p>
+                </div>
+                <div class="w-[558px] flex flex-col gap-[28px]">
+                    <p class="text-[36px] text-white/50 fonn-regular">Контакты </p>
+                    <p class="text-[48px] text-white fonn-medium leading-[58px]">+7 999 999 99 99</p>
+                </div>
+            </div>
+            <div class="mt-[96px] flex justify-between relative z-10">
+                <nav class="flex flex-col gap-[40px]">
+                    <a class="text-[36px] text-white flex flex-col gap-[40px] font-medium" href="">Спецпредложения</a>
+                    <a class="text-[36px] text-white flex flex-col gap-[40px] font-medium" href="">Услуги</a>
+                    <a class="text-[36px] text-white flex flex-col gap-[40px] font-medium" href="">Цены</a>
+                    <a class="text-[36px] text-white flex flex-col gap-[40px] font-medium" href="">О компании </a>
+                    <a class="text-[36px] text-white flex flex-col gap-[40px] font-medium" href="">Контакты </a>
+                </nav>
+                <div>
+                    <button
+                        class="bg-[#FF0000] OpenPopup text-white rounded-[24px] w-[1076px] py-[40px] text-[36px] font-semibold mb-[130px]">Заказать
+                        обратный звонок </button>
+                    <div class="flex gap-8">
+                        <img src="./assets/инста.svg" alt="">
+                        <img src="./assets/Рутуб.svg" alt="">
+                        <img src="./assets/тг.svg" alt="">
+                        <img src="./assets/Ютуб.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script/script.js" type="module"></script>
+    <!-- <script src="./showMarks.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+    .container-main {
+        width: 1790px !important;
+    }
+/* === Кастомный чекбокс === */
+
+/* Скрываем оригинальный чекбокс и создаём кастомный */
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 44px;
+    height: 44px;
+    background-color: #131417;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Убираем фокус-обводку */
+.custom-checkbox:focus {
+    outline: none;
+}
+
+/* Состояние "отмечен" — зелёный фон */
+.custom-checkbox:checked {
+    background-color: #16AF08;
+}
+
+/* Псевдоэлемент для отображения галочки */
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/Icon (1).svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+

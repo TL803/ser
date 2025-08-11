@@ -1,0 +1,61 @@
+        const showMarksContainer = document.getElementById('showAllMarks')
+        const marks = [
+            "./assets/all-marks/64058c056ae8be500c3ed669 3.svg",
+            "./assets/all-marks/BAIC Motor.svg",
+            "./assets/all-marks/Bestune.svg",
+            "./assets/all-marks/BMW.svg",
+            "./assets/all-marks/Chery.svg",
+            "./assets/all-marks/Chevrolet.svg",
+            "./assets/all-marks/Datsun.svg",
+            "./assets/all-marks/dongfeng 2.svg",
+            "./assets/all-marks/Exeed.svg",
+            "./assets/all-marks/Fiat_(logo).svg",
+            "./assets/all-marks/Ford.svg",
+            "./assets/all-marks/Foton.svg",
+            "./assets/all-marks/GAC.svg",
+            "./assets/all-marks/Geely.svg",
+            "./assets/all-marks/Great Wall.svg",
+            "./assets/all-marks/Group 96.svg",
+            "./assets/all-marks/Haval.svg",
+            "./assets/all-marks/Honda.svg",
+            "./assets/all-marks/Hyundai.svg",
+            "./assets/all-marks/image 259.svg",
+            "./assets/all-marks/Infiniti_logo 2.svg",
+            "./assets/all-marks/Isuzu.svg",
+            "./assets/all-marks/Iveco.svg",
+            "./assets/all-marks/JAC Motors.svg",
+            "./assets/all-marks/Jeep.svg",
+            "./assets/all-marks/KIA_logo3.svg",
+            "./assets/all-marks/Lada.svg",
+            "./assets/all-marks/Land Rover.svg",
+            "./assets/all-marks/Lexus.svg",
+            "./assets/all-marks/Li_Auto_logo 1.svg",
+            "./assets/all-marks/Lifan.svg",
+            "./assets/all-marks/logo 4.svg",
+            "./assets/all-marks/logo 5.svg",
+            "./assets/all-marks/Mazda.svg",
+            "./assets/all-marks/Mercedes Benz.svg",
+            "./assets/all-marks/Mini.svg",
+            "./assets/all-marks/Mitsubishi.svg",
+            "./assets/all-marks/Nissan.svg",
+            "./assets/all-marks/Opel.svg",
+            "./assets/all-marks/Peugeot_Logo.svg",
+            "./assets/all-marks/Renault.svg",
+            "./assets/all-marks/SsangYong.svg",
+            "./assets/all-marks/Subaru.svg",
+            "./assets/all-marks/Suzuki.svg",
+            "./assets/all-marks/Toyota.svg",
+            "./assets/all-marks/UAZ.svg",
+            "./assets/all-marks/Vector-1.svg",
+            "./assets/all-marks/Vector.svg",
+            "./assets/all-marks/Volkswagen.svg",
+            "./assets/all-marks/Volvo.svg",
+            "./assets/all-marks/图形+英文标识（横版）-01 3.svg"
+        ];
+        marks.forEach(mark => {
+            const img = document.createElement('img');
+            img.setAttribute('src', mark);
+            img.setAttribute('alt', 'Логотип бренда');
+            img.classList.add('w-16', 'h-16', 'mx-2', 'opacity-80', 'hover:opacity-100', 'transition');
+            showMarksContainer.appendChild(img);
+        });
