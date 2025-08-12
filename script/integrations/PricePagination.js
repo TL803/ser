@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const popupManager = new PopupManager();
-    popupManager.bindOpenButtons('.OpenConsultationPopup');
+
+    // === Делегирование кликов на кнопки открытия модалки ===
+    document.addEventListener('click', function (e) {
+        if (e.target.classList.contains('OpenConsultationPopup')) {
+            e.preventDefault();
+            popupManager.open();
+        }
+    });
 
     const PricePaginationContainer = document.getElementById('PricePaginationContainer');
 
