@@ -5,65 +5,49 @@ document.addEventListener("DOMContentLoaded", function () {
     const popup = document.createElement('div');
 
     popup.innerHTML = `
-        <section class='container-main bg-[#060807] p-[48px] rounded-[32px] relative overflow-hidden z-10 max-w-[1700px] w-full'>
-            <!-- Фоны-шарики (только визуальные, не мешают) -->
-            <div class="absolute top-[-200px] -left-40 w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px] pointer-events-none"></div>
-            <div class="absolute top-[300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px] pointer-events-none"></div>
-            <div class="absolute bottom-[-300px] left-[800px] w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px] pointer-events-none"></div>
+    <section class='container-main  bg-[#060807] p-[48px] rounded-[32px] relative overflow-hidden z-10'>
+        <img class="absolute top-[32px] right-[16px] md:hidden block" src="./assets/adaptive/close-circle.svg" alt="./assets/adaptive/close-circle.svg"/>
+        <div class="absolute top-[-200px] -left-40 w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px] z-[-1]  pointer-events-none"></div>
+        <div class="absolute top-[300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px] z-[-1]  pointer-events-none"></div>
+        <div class="absolute bottom-[-300px] left-[800px] w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px]  z-[-1] pointer-events-none"></div>
 
-            <div class="text-center mb-[40px]">
-                <h2 class="text-white text-[48px] font-medium">
-                    Заполни форму и получи <span class="text-[#FF0000]">бесплатную консультацию</span>
-                </h2>
-            </div>
+        <div class="text-center">
+            <h2 class="text-white md:text-[48px] text-[16px] font-regular md:font-medium">Заполни форму и получи <span class="text-[#FF0000]">бесплатную консультацию</span></h2>
+        </div>
 
-            <div class="flex items-center justify-between">
-                <form action="#" class="flex flex-col gap-[60px] w-full max-w-[752px]">
-                    <div class="flex flex-col gap-[12px]">
-                        <p class="text-[20px] font-regular text-white">ФИО</p>
-                        <input
-                            class="w-full h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px] focus:outline-none"
-                            type="text"
-                            placeholder="Иванов Иван Иванович"
-                            required>
-                    </div>
-
-                    <div class="flex flex-col gap-[12px]">
-                        <p class="text-[20px] font-regular text-white">Email <span class="text-[#FF0000]">*</span></p>
-                        <input
-                            class="w-full h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px] focus:outline-none"
-                            type="email"
-                            placeholder="mail@mail.ru"
-                            required>
-                    </div>
-
-                    <div class="flex flex-col gap-[12px]">
-                        <p class="text-[20px] font-regular text-white">Ваш телефон</p>
-                        <input
-                            class="w-full h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px] focus:outline-none"
-                            type="tel"
-                            placeholder="+ 7 999-999-99-99"
-                            required>
-                    </div>
-
-                    <div class="flex items-center gap-[12px] md:gap-[20px]">
-                        <input type="checkbox" id="consent" class="mt-1 w-[45px] custom-checkbox" checked>
-                        <label for="consent" class="text-[14px] md:text-[16px] text-white leading-relaxed">
-                            Я согласен с условиями обработки персональных данных
-                        </label>
-                    </div>
-
-                    <button type="submit"
-                        class="w-full mt-[40px] py-[40px] text-[32px] font-regular rounded-[24px] bg-[#FF0000] text-[#060807] relative z-10 hover:bg-[#E60000] transition duration-300">
-                        Получить предложение
-                    </button>
-                </form>
-
-                <img class="hidden md:block w-[830px] h-[494px] object-cover"
-                     src="./assets/eDr8OaZX4AoQ5KC0a1GEe3i9B5ggXmNTCCFhJLOV 1.png"
-                     alt="Машина">
-            </div>
-        </section>
+        <div class="flex items-center justify-between mt-[30px] md:mt-[60px]">
+            <form action="" class="flex flex-col gap-[32px] w-[280px] md:gap-[60px]">
+                <div class="flex flex-col gap-[12px]">
+                    <p class="text-[15px] md:text-[20px] font-regular text-white">ФИО</p>
+                    <input
+                        class="md:w-[752px] w-full h-[42px] md:h-[96px] rounded-[12px] bg-[#2B2B2B] text-[12px] md:text-[24px] font-regular text-[#B8B8B8] pl-[12px] md:pl-[32px]"
+                        type="text" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="flex flex-col gap-[12px]">
+                    <p class="text-[15px] md:text-[20px] font-regular text-white">Email <span class="text-[#FF0000]">*</span></p>
+                    <input
+                        class="md:w-[752px] w-full h-[42px] md:h-[96px] rounded-[12px] bg-[#2B2B2B] text-[12px] md:text-[24px] font-regular text-[#B8B8B8] pl-[12px] md:pl-[32px]"
+                        type="text" placeholder="mail@mail.ru">
+                </div>
+                <div class="flex flex-col gap-[12px]">
+                    <p class="text-[15px] md:text-[20px] font-regular text-white">Ваш телефон</p>
+                    <input
+                        class="md:w-[752px] w-full h-[42px] md:h-[96px] rounded-[12px] bg-[#2B2B2B] text-[12px] md:text-[24px] font-regular text-[#B8B8B8] pl-[12px] md:pl-[32px]"
+                        type="text" placeholder="+ 7 999-999-99-99">
+                </div>
+                <div class="flex items-center gap-[12px] md:gap-[44px] w-[500px] ">
+                    <input type="checkbox" class="custom-checkbox" checked>
+                    <label class="text-[10px] w-[280px] md:text-[16px] md:w-auto text-white">
+                        Я согласен с условиями обработки персональных данных
+                    </label>
+                </div>
+                <button class="w-full md:w-[752px] md:mt-[80px] py-[10px] md:py-[40px] text-[15px] md:text-[32px] font-regular rounded-[24px] bg-[#FF0000] text-[#060807] relative z-10">
+                    Получить предложение
+                </button>
+            </form>
+            <img class="w-[830px] h-[494px] md:block hidden" src="./assets/eDr8OaZX4AoQ5KC0a1GEe3i9B5ggXmNTCCFhJLOV 1.png" alt="Машина">
+        </div>
+    </section>
     `;
 
     popupBack.className = 'hidden w-full h-screen fixed top-0 left-0 bg-[#0F0F0F]/70 z-[100] flex justify-center items-center backdrop-blur-sm';

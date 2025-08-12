@@ -5,47 +5,48 @@ const popup = document.createElement('div')
 const openButtons = document.getElementsByClassName('OpenPopup')
 
 popup.innerHTML = `
-    <section class='container-main bg-[#060807] p-[48px] rounded-[32px] relative overflow-hidden z-10'>
+    <section class='container-main  bg-[#060807] p-[48px] rounded-[32px] relative overflow-hidden z-10'>
+        <img class="absolute top-[32px] right-[16px] md:hidden block" src="./assets/adaptive/close-circle.svg" alt="./assets/adaptive/close-circle.svg"/>
         <div class="absolute top-[-200px] -left-40 w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px] z-[-1]  pointer-events-none"></div>
         <div class="absolute top-[300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px] z-[-1]  pointer-events-none"></div>
         <div class="absolute bottom-[-300px] left-[800px] w-[500px] h-[500px] rounded-full bg-[#FF0000]/50 blur-[150px]  z-[-1] pointer-events-none"></div>
 
         <div class="text-center">
-            <h1 class="text-white text-[70px] font-medium">Остались вопросы?</h1>
-            <h2 class="text-white text-[48px] font-medium">Заполни форму и получи <span class="text-[#FF0000]">бесплатную консультацию</span></h2>
+            <h1 class="text-white md:text-[70px] text-[20px] font-medium">Остались вопросы?</h1>
+            <h2 class="text-white md:text-[48px] text-[16px] font-regular md:font-medium">Заполни форму и получи <span class="text-[#FF0000]">бесплатную консультацию</span></h2>
         </div>
 
-        <div class="flex items-center justify-between mt-[60px]">
-            <form action="" class="flex flex-col gap-[60px]">
+        <div class="flex items-center justify-between mt-[30px] md:mt-[60px]">
+            <form action="" class="flex flex-col gap-[32px] w-[280px] md:gap-[60px]">
                 <div class="flex flex-col gap-[12px]">
-                    <p class="text-[20px] font-regular text-white">ФИО</p>
+                    <p class="text-[15px] md:text-[20px] font-regular text-white">ФИО</p>
                     <input
-                        class="w-[752px] h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px]"
+                        class="md:w-[752px] w-full h-[42px] md:h-[96px] rounded-[12px] bg-[#2B2B2B] text-[12px] md:text-[24px] font-regular text-[#B8B8B8] pl-[12px] md:pl-[32px]"
                         type="text" placeholder="Иванов Иван Иванович">
                 </div>
                 <div class="flex flex-col gap-[12px]">
-                    <p class="text-[20px] font-regular text-white">Email <span class="text-[#FF0000]">*</span></p>
+                    <p class="text-[15px] md:text-[20px] font-regular text-white">Email <span class="text-[#FF0000]">*</span></p>
                     <input
-                        class="w-[752px] h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px]"
+                        class="md:w-[752px] w-full h-[42px] md:h-[96px] rounded-[12px] bg-[#2B2B2B] text-[12px] md:text-[24px] font-regular text-[#B8B8B8] pl-[12px] md:pl-[32px]"
                         type="text" placeholder="mail@mail.ru">
                 </div>
                 <div class="flex flex-col gap-[12px]">
-                    <p class="text-[20px] font-regular text-white">Ваш телефон</p>
+                    <p class="text-[15px] md:text-[20px] font-regular text-white">Ваш телефон</p>
                     <input
-                        class="w-[752px] h-[96px] rounded-[12px] bg-[#2B2B2B] text-[24px] font-regular text-[#B8B8B8] pl-[32px]"
+                        class="md:w-[752px] w-full h-[42px] md:h-[96px] rounded-[12px] bg-[#2B2B2B] text-[12px] md:text-[24px] font-regular text-[#B8B8B8] pl-[12px] md:pl-[32px]"
                         type="text" placeholder="+ 7 999-999-99-99">
                 </div>
-                <div class="flex items-center gap-[12px] md:gap-[44px]">
+                <div class="flex items-center gap-[12px] md:gap-[44px] w-[500px] ">
                     <input type="checkbox" class="custom-checkbox" checked>
                     <label class="text-[10px] w-[280px] md:text-[16px] md:w-auto text-white">
                         Я согласен с условиями обработки персональных данных
                     </label>
                 </div>
-                <button class="w-full mt-[80px] py-[40px] text-[32px] font-regular rounded-[24px] bg-[#FF0000] text-[#060807] relative z-10">
+                <button class="w-full md:w-[752px] md:mt-[80px] py-[10px] md:py-[40px] text-[15px] md:text-[32px] font-regular rounded-[24px] bg-[#FF0000] text-[#060807] relative z-10">
                     Получить предложение
                 </button>
             </form>
-            <img class="w-[830px] h-[494px]" src="./assets/eDr8OaZX4AoQ5KC0a1GEe3i9B5ggXmNTCCFhJLOV 1.png" alt="Машина">
+            <img class="w-[830px] h-[494px] md:block hidden" src="./assets/eDr8OaZX4AoQ5KC0a1GEe3i9B5ggXmNTCCFhJLOV 1.png" alt="Машина">
         </div>
     </section>
 `
