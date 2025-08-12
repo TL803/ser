@@ -48,7 +48,8 @@
 
     @media (max-width: 1790px) {
         .container-main {
-            width: 375px !important;
+            width: 345px !important;
+            
         }
 
         .custom-checkbox {
