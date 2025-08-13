@@ -43,8 +43,7 @@
     <section class="bg-cover bg-center w-full h-[484px] md:h-[900px] pt-8 relative"
         style="background-image: url('./assets/rectangle-1.png');">
         <header
-            class="container-main  fixed left-1/2 top-4 transform -translate-x-1/2 z-50 mx-auto py-4 px-5 bg-[#070709] rounded-2xl box-border items-center justify-between hidden md:flex w-auto"
-            >
+            class="container-main  fixed left-1/2 top-4 transform -translate-x-1/2 z-50 mx-auto py-4 px-5 bg-[#070709] rounded-2xl box-border items-center justify-between hidden md:flex w-auto">
             <img src="./assets/Logo Независимость(2) 1 (2).svg" alt="Лого">
             <nav class="flex gap-[52px] text-white">
                 <a class="text-[16px] font-normal" href="#specialOffers">
@@ -65,9 +64,9 @@
             </nav>
             <div class="flex gap-10">
                 <div class="flex flex-col gap-2">
-                    <p class="text-white flex gap-3 items-center">
-                        <img src="./assets/Vector.svg" alt=""> + 7 495-161-38-13
-                    </p>
+                    <a href="tel:+74951613813" class="text-white flex gap-3 items-center">
+                        <img src="./assets/Vector.svg" alt=""> +7 495-161-38-13
+                    </a>
                     <p class="text-white flex gap-3 items-center">
                         <img src="./assets/Vector-1.svg" alt=""> г. Москва, Береговой проезд, дом 4/6с3
                     </p>
@@ -83,7 +82,7 @@
             <div class="flex gap-[20px]">
                 <div class="flex flex-row w-[160px] items-center gap-[10px]">
                     <img class="w-[18px]" src="./assets/adaptive/Vector (10).svg" alt="">
-                    <p class="text-white text-[14px]">+ 7 495-161-38-13</p>
+                    <a href="tel:+74951613813" class="text-white text-[14px]">+7 495-161-38-13</a>
                 </div>
                 <img id="burgerButton" src="./assets/adaptive/Бургер меню (3).svg" alt="Бургер">
             </div>
@@ -106,18 +105,19 @@
         </div>
 
         <div class=" gap-8 absolute right-20 bottom-5 hidden md:flex">
-            <a
+            <a target="_blank"
                 href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fnzvsmst_auto%2F%3Figsh%3DMTd3MGhjODlobXpoaw%253D%253D%26utm_source%3Dqr&is_from_rle"><img
                     src="./assets/инста.svg" alt=""></a>
-            <a href="https://rutube.ru/channel/65463639/"><img src="./assets/Рутуб.svg" alt=""></a>
-            <a href="https://t.me/nezaservice"><img src="./assets/тг.svg" alt="https://t.me/nezaservice"></a>
-            <a href="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"><img src="./assets/Ютуб.svg" alt="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"></a>
+            <a target="_blank" href="https://rutube.ru/channel/65463639/"><img src="./assets/Рутуб.svg" alt=""></a>
+            <a target="_blank" href="https://t.me/nezaservice"><img src="./assets/тг.svg" alt="https://t.me/nezaservice"></a>
+            <a target="_blank" href="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"><img src="./assets/Ютуб.svg"
+                    alt="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"></a>
         </div>
     </section>
 
     <main class="container-main m-auto">
         <section id="specialOffers" class="text-center">
-            <h2 class="text-[24px] text-medium md:text-6xl font-medium mt-40 mb-7">Спецпредложения</h2>
+            <h2 class="text-[24px] text-medium md:text-6xl font-medium mt-[80px] md:mt-40 mb-[0] md:mb-7">Спецпредложения</h2>
             <p class="text-[14px] md:text-4xl font-regular mb-12">Следите за нашими новыми предложениями и экономьте
                 вместе с нами!</p>
 
@@ -186,7 +186,7 @@
         </section>
 
         <section id="services" class="md:w-[1316px] m-auto flex flex-col justify-center m-auto items-center">
-            <h2 class="text-[24px] md:text-6xl font-medium mt-40 mb-7">Услуги</h2>
+            <h2 class="text-[24px] md:text-6xl font-medium mt-[80px] mb-[0px] md:mt-40 md:mb-7">Услуги</h2>
             <p class="text-[14px] md:text-4xl font-regular mb-12 text-center">Наш сервис представляет большой спектр
                 услуг, основные из которых:
             </p>
@@ -200,7 +200,7 @@
         </section>
 
         <section id="prices" class="container-main m-auto flex flex-col justify-center items-center">
-            <h2 class="text-[24px] md:text-6xl font-medium mt-[150px] mb-[52px]">Цены</h2>
+            <h2 class="text-[24px] md:text-6xl font-medium mt-[50px] mb-[24px] md:mt-[150px] md:mb-[52px]">Цены</h2>
 
             <div id="PricePaginationContainer">
             </div>
@@ -212,30 +212,43 @@
         </section>
 
         <section>
-            <h2 class="text-[24px] md:text-6xl font-medium mt-[150px] mb-[80px] text-center ">Ремонт и обслуживание всех
+            <h2 class="text-[24px] md:text-6xl font-medium mt-[80px] md:mt-[150px] mb-[24px] md:mb-[80px] text-center ">Ремонт и обслуживание всех
                 брендов
                 автомобилей </h2>
-            <div class="flex flex-row flex-wrap" id="showAllMarks"></div>
+            <div class="flex flex-row flex-wrap justify-center" id="showAllMarks"></div>
         </section>
 
         <section id="about">
-            <h1 class="text-[24px] md:text-6xl font-medium mt-[150px] mb-[80px] text-center">Почему выбирают нас?</h1>
-            <div id="aboutUsIntegrationContainer" class="flex flex-wrap gap-[32px]">
+            <h1 class="text-[24px] md:text-6xl font-medium mt-[80px] md:mt-[150px] mb-[24px] md:mb-[80px] text-center">Почему выбирают нас?</h1>
+            <div id="aboutUsIntegrationContainer" class="flex flex-wrap gap-[24px] md:gap-[32px]">
 
             </div>
         </section>
 
-        <section class="mb-[200px]">
-            <h2 class="text-[24px] md:text-[64px] mt-[150px] mb-[80px]">Отзывы</h2>
-<div class="w-full max-w-6xl mx-auto overflow-x-auto px-4">
-  <div class="flex gap-8 pb-4">
-    <img class="w-[1086px] flex-shrink-0 rounded-2xl" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="./assets/отзывы/Group 1 (1).png" alt="">
-    <img class="w-[1086px] flex-shrink-0 rounded-2xl" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="./assets/отзывы/Group 1 (1).png" alt="">
-    <img class="w-[1086px] flex-shrink-0 rounded-2xl" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="./assets/отзывы/Group 1 (1).png" alt="">
-  </div>
-</div>
-            <!-- <div class="w-[200px] h-[100px]" style=""></div> -->
-        </section>
+<section class="mb-[60px] md:mb-[200px] relative">
+    <h2 class="text-[24px] md:text-[64px] mt-[80px] mb-[24px] md:mt-[150px] md:mb-[80px] px-4">Отзывы</h2>
+
+    <div class="w-full max-w-full mx-auto overflow-x-auto px-4 pb-6 scrollbar-hide" id="reviews-container">
+        <div class="flex gap-8 pb-4 w-max ">
+            <a target="_blank" href="https://yandex.ru/maps/org/nezavisimost/73001713388/?from=tableau_yabro&indoorLevel=1&ll=37.502831%2C55.757594&utm_source=share&z=17" class="block">
+                <img src="./assets/отзывы/Group 1 (1).png" alt="Отзыв"
+                    class="w-[300px] md:w-[1086px] h-auto flex-shrink-0 shadow-[0_20px_40px_rgba(0,0,0,0.15)] rounded-lg cursor-grab" />
+            </a>
+            <a target="_blank" href="https://yandex.ru/maps/org/nezavisimost/73001713388/?from=tableau_yabro&indoorLevel=1&ll=37.502831%2C55.757594&utm_source=share&z=17" class="block">
+                <img src="./assets/отзывы/Group 4 (1).png" alt="Отзыв"
+                    class="w-[300px] md:w-[1086px] h-auto flex-shrink-0 shadow-[0_20px_40px_rgba(0,0,0,0.15)] rounded-lg cursor-grab" />
+            </a>
+            <a target="_blank" href="https://yandex.ru/maps/org/nezavisimost/73001713388/?from=tableau_yabro&indoorLevel=1&ll=37.502831%2C55.757594&utm_source=share&z=17" class="block">
+                <img src="./assets/отзывы/Group 5 (1).png" alt="Отзыв"
+                    class="w-[300px] md:w-[1086px] h-auto flex-shrink-0 shadow-[0_20px_40px_rgba(0,0,0,0.15)] rounded-lg cursor-grab" />
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
 
 
     </main>
@@ -244,7 +257,7 @@
         <div class="absolute top-[300px] right-[-150px] w-[500px] h-[500px] rounded-full bg-[#FF0000]/50  blur-[150px]">
         </div>
 
-        <div class="container-main m-auto pt-[144px] pb-[125px] relative z-10">
+        <div class="container-main m-auto pt-[40px] pb-[40px] md:pt-[144px] md:pb-[125px] relative z-10">
             <section>
                 <div class="text-center">
                     <h1 class="text-white text-[24px] md:text-[70px] font-medium">Остались вопросы?</h1>
@@ -272,7 +285,7 @@
                             <p class="text-[15px] md:text-[20px] font-regular text-white">Ваш телефон </p>
                             <input
                                 class="md:w-[752px] w-full  h-[42px] md:h-[96px] rounded-[12px] bg-[#2B2B2B] text-[12px] md:text-[24px] font-regular text-[#B8B8B8] pl-[12px] md:pl-[32px]"
-                                type="text" placeholder="+ 7 495-161-38-13">
+                                type="text" placeholder="+7 (999) 999-99-99">
                         </div>
                         <div class="flex items-center gap-[12px] md:gap-[44px]">
                             <input type="checkbox" class="custom-checkbox" checked>
@@ -284,7 +297,7 @@
                         src="./assets/eDr8OaZX4AoQ5KC0a1GEe3i9B5ggXmNTCCFhJLOV 1.png" alt="Машина">
                 </div>
                 <button
-                    class="w-full mt-[80px] py-[10px] md:py-[40px] text-[15px] md:text-[32px] font-regular rounded-[24px] bg-[#FF0000] text-[#060807] relative z-10">Получить
+                    class="w-full mt-[40px] md:mt-[80px] py-[10px] md:py-[40px] text-[15px] md:text-[32px] font-regular rounded-[24px] bg-[#FF0000] text-[#060807] relative z-10">Получить
                     предложение</button>
             </section>
             <iframe
@@ -294,7 +307,7 @@
                 loading="lazy">
             </iframe>
 
-            <div class="flex flex-row flex-wrap justify-between mt-[150px] relative z-10">
+            <div class="flex flex-row flex-wrap justify-between mt-[40px] md:mt-[150px] relative z-10">
                 <div class="md:w-[558px] w-[164px] flex flex-col gap-[20px] md:gap-[28px]">
                     <p class="text-[14px] md:text-[36px] text-white/50 fonn-regular">Адрес</p>
                     <p class="text-[16px] md:text-[48px] text-white fonn-medium md:leading-[58px] leading-[20px]">г.
@@ -310,7 +323,8 @@
                 </div>
                 <div class="md:w-[558px] w-[164px] flex flex-col gap-[20px] md:gap-[28px] mt-[40px] md:mt-0">
                     <p class="text-[14px] md:text-[36px] text-white/50 fonn-regular">Контакты </p>
-                    <p class="text-[16px] md:text-[48px] text-white fonn-medium md:leading-[58px] leading-[20px]">+7 495-161-38-13</p>
+                    <a a href="tel:+74951613813" class="text-[16px] md:text-[48px] text-white fonn-medium md:leading-[58px] leading-[20px]">+7
+                        495-161-38-13</a>
                 </div>
             </div>
             <div class="mt-[96px] flex justify-between relative z-10">
@@ -327,14 +341,15 @@
                     <button
                         class="bg-[#FF0000] OpenPopup text-white rounded-[8px] md:block hidden md:rounded-[24px] w-full md:w-[1076px] py-[10px] md:py-[40px] text-[15px] md:text-[36px] font-semibold mb-[130px]">Заказать
                         обратный звонок </button>
-        <div class=" gap-8 flex">
-            <a
-                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fnzvsmst_auto%2F%3Figsh%3DMTd3MGhjODlobXpoaw%253D%253D%26utm_source%3Dqr&is_from_rle"><img
-                    src="./assets/инста.svg" alt=""></a>
-            <a href="https://rutube.ru/channel/65463639/"><img src="./assets/Рутуб.svg" alt=""></a>
-            <a href="https://t.me/nezaservice"><img src="./assets/тг.svg" alt=""></a>
-            <a href="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"><img src="./assets/Ютуб.svg" alt="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"></a>
-        </div>
+                    <div class=" gap-8 flex">
+                        <a target="_blank"
+                            href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fnzvsmst_auto%2F%3Figsh%3DMTd3MGhjODlobXpoaw%253D%253D%26utm_source%3Dqr&is_from_rle"><img
+                                src="./assets/инста.svg" alt=""></a>
+                        <a target="_blank" href="https://rutube.ru/channel/65463639/"><img src="./assets/Рутуб.svg" alt=""></a>
+                        <a target="_blank" href="https://t.me/nezaservice"><img src="./assets/тг.svg" alt=""></a>
+                        <a target="_blank" href="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"><img src="./assets/Ютуб.svg"
+                                alt="https://youtube.com/@auto_nzvsmst?si=0pMLucE7pYOKiQwA"></a>
+                    </div>
                     <button
                         class="bg-[#FF0000] OpenPopup mt-[40px] block md:hidden text-white rounded-[8px] md:rounded-[24px] w-full md:w-[1076px] py-[10px] md:py-[40px] text-[15px] md:text-[36px] font-semibold mb-[130px]">Заказать
                         обратный звонок </button>
@@ -365,7 +380,8 @@
                         проезд, дом 4/6с3</a>
                 </p>
                 <p class="flex gap-[8px] w-[206px]"><img src="./assets/adaptive/Vector.svg" alt=""><a
-                        href="./contacts.html" class="font-bold" style="color: #FF0000 !important;">+ 7 495-161-38-13</a>
+                        href="tel:+74951613813" class="font-bold" style="color: #FF0000 !important;">+ 7
+                        495-161-38-13</a>
                 </p>
                 <button
                     class="open-modal-btn OpenConsultationPopup bg-white w-[210px] font-medium text-[#FF0000] px-4 py-2 rounded-[12px] transition hover:bg-gray-50 shadow-xl mt-[30px]">
@@ -380,5 +396,3 @@
 </body>
 
 </html>
-
-

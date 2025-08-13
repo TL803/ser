@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (burgerButton) {
         burgerButton.addEventListener('click', openMenu);
     }
+
     if (closeMobileMenu) {
         closeMobileMenu.addEventListener('click', closeMenu);
     }
@@ -37,6 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
             closeMenu();
         }
     });
+
+    if (mobileMenu) {
+        const menuLinks = mobileMenu.querySelectorAll('a, .open-modal-btn');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+    }
 
     function updateSelectClass(select) {
         if (select.value) {
