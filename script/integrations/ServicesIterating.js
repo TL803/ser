@@ -14,7 +14,7 @@ const serviceArr = [
 // Очищаем контейнер и добавляем все карточки
 serviceIntegrationContainer.innerHTML = serviceArr.map(proposal => `
     <div class="bg-[#0F0F0F] OpenConsultationPopup cursor-pointer w-[164px] md:w-[305px] h-[166px] md:h-[318px] md:py-[28px] rounded-[16px] flex flex-col items-center justidy-center md:justify-between">
-        <img src="./assets/services/${proposal.img}" alt="${proposal.name}" class="w-[110px] h-[110px] md:w-[180px] md:h-[180px]  md:mb-4">
-        <p class="text-white text-center text-[15px] md:text-2xl font-medium">${proposal.name}</p>
+        <img src="./assets/services/${proposal.img}" alt="${proposal.name}" class="w-[110px] h-[110px] md:w-[180px] md:h-[180px] pointer-events-none  md:mb-4">
+        <p class="text-white pointer-events-none text-center text-[15px] md:text-2xl font-medium">${proposal.name}</p>
     </div>
 `).join('');
